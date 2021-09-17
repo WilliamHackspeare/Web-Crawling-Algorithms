@@ -13,7 +13,7 @@ for page in range(1,pagesToGet+1):                                              
     page=requests.get(url)                                                      #Sends a request for the HTTP content of the current URL and saves it
     sp1=BeautifulSoup(page.text,'html.parser')                                  #Initialises a BeautifulSoup object to parse the HTML content saved from the URL
     frame=[]                                                                    #Intialises a blank list to stare the data of the current page
-    links=soup.find_all('div',attrs={'class':'fc-item__container'})             #Finds and stores all instances of the specified tag-attributes combination containing the article links
+    links=sp1.find_all('div',attrs={'class':'fc-item__container'})             #Finds and stores all instances of the specified tag-attributes combination containing the article links
     print(len(links))                                                           #Prints the number of articles found on the page
     for j in links:             
         title = j.find("a").text.strip()                                        #Saves the title
