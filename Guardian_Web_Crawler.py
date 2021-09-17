@@ -30,5 +30,5 @@ data=pd.DataFrame(upperframe, columns=['text','title','Link'])                  
 nan_value = float("NaN")
 data.replace("", nan_value, inplace=True)                                       #Replace "" with NaN in the text for pages with no news paragraphs
 data.dropna(subset = ["text"], inplace=True)                                    #Drop pages with no text
-data.to_csv('OPI.csv')                                                          #Convert the dataframe to a CSV file
+data.to_csv('GRD.csv')                                                          #Convert the dataframe to a CSV file
 print(data.head())                                                              #Print the first 5 rows of the dataframe                                                     #Print the first 5 rows of the dataframe
