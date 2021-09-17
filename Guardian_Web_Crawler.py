@@ -8,7 +8,7 @@ upperframe=[]                                               #Initialises a list 
 
 for page in range(1,pagesToGet+1):                                              #Basic loop to cycle through the pages
     print('processing page :', page)                                            
-    url = 'https://www.opindia.com/latest-news/page/'+str(page)+'/?nocache'     #Saves the URL of current page
+    url = 'https://www.theguardian.com/world?page='+str(page)                   #Saves the URL of current page
     print(url)                                                                  
     page=requests.get(url)                                                      #Sends a request for the HTTP content of the current URL and saves it
     sp1=BeautifulSoup(page.text,'html.parser')                                  #Initialises a BeautifulSoup object to parse the HTML content saved from the URL
